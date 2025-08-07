@@ -19,7 +19,7 @@ class CPU {
 int main(){
     
     CPU();
-    std::cout << "funcionando" << std::endl;
+    std::cout << "teste" << std::endl;
 
     return 0;
 }
