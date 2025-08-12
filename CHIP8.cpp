@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdint.h>
 #include <fstream>
+#include <iomanip>
 
 uint8_t memoria [4096];
 uint8_t V [16];
@@ -15,9 +16,15 @@ bool teclas [16];
 
 void printarMemoria (){
     
-    for (int i=0; i < 4096; i++ ){
-        std::cout << std::hex << (int)memoria[i] << std::endl;
+    for (int i=0; i < 4096; i += 16 ){
+        std::cout << std::hex << std::setw(4) << std::setfill('0') << i << ": ";
+
+        for (int j = 0; j < 16; j++){
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)memoria[i + j] << ":";
+        }
+        std::cout << std::endl;
     }
+
 }
 
 
