@@ -5,6 +5,8 @@
 #include <iomanip>
 #include <string.h>
 
+
+//carrega as constantes
 uint8_t memoria [4096];
 uint8_t V [16];
 uint16_t I;
@@ -14,10 +16,10 @@ uint8_t SP;
 uint8_t timerDelay;
 uint8_t display [64*32];
 bool teclas [16];
-std::string caminhoDaROM = "C:/Users/Asus/Desktop/C++/CHIP8/ibm.ch8";
+std::string caminhoDaROM = "C:/Users/Asus/Desktop/C++/CHIP8/danm8ku.ch8";
 
 
-
+//mostra a memoria no terminal com os valores da ROM carregados
 void printarMemoria (){
     for (int i=0; i < 4096; i += 16 ){
         std::cout << std::hex << std::setw(4) << std::setfill('0') << i << ": ";
@@ -30,14 +32,16 @@ void printarMemoria (){
 }
 
 
-
+//le a ROM contida em caminhoDaROM como um arquivo binario e o carrega na memoria
 bool carregarROM(const char* caminhoDaROM) {
+
     int inicioROM = 0x200;
     int index = inicioROM;
 
     std::ifstream ROM(caminhoDaROM, std::ios::binary);
+
     if (!ROM.is_open()) {
-        std::cout << "filha da puta deu pau na ROM" << std::endl;
+        std::cout << "deu pau na ROM" << std::endl;
         return false;
     }
 
@@ -47,9 +51,10 @@ bool carregarROM(const char* caminhoDaROM) {
     }
 
     ROM.close();
+
 }
 
-
+//loop principal
 int main(){
     std::cout << "refogado de macaco-prego amanha no refeitorio" << std::endl;
     carregarROM(caminhoDaROM.c_str());
