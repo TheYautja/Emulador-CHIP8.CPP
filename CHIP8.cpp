@@ -51,7 +51,7 @@ bool carregarROM(const char* caminhoDaROM) {
     }
 
     ROM.close();
-
+    return true;
 }
 
 //loop principal
