@@ -32,7 +32,7 @@ void printarMemoria (){
 }
 
 
-//le a ROM contida em caminhoDaROM como um arquivo binario e o carrega na memoria
+//le a ROM contida em caminhoDaROM como um arquivo binario e carrega na memoria
 bool carregarROM(const char* caminhoDaROM) {
 
     int inicioROM = 0x200;
