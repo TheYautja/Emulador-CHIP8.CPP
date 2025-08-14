@@ -1,4 +1,4 @@
 ## primeiro projeto de C++
 
 ### to-do:
- fazer os opcodes
+switch com os opcodes
