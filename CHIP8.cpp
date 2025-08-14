@@ -37,7 +37,7 @@ bool carregarROM(const char* caminhoDaROM) {
 
     std::ifstream ROM(caminhoDaROM, std::ios::binary);
     if (!ROM.is_open()) {
-        std::cout << "Deu pau na ROM" << std::endl;
+        std::cout << "filha da puta deu pau na ROM" << std::endl;
         return false;
     }
 
@@ -51,7 +51,7 @@ bool carregarROM(const char* caminhoDaROM) {
 
 
 int main(){
-    std::cout << "Clang do caralho" << std::endl;
+    std::cout << "refogado de macaco-prego amanha no refeitorio" << std::endl;
     carregarROM(caminhoDaROM.c_str());
     printarMemoria();
     return 0;
