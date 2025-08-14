@@ -54,7 +54,7 @@ bool carregarROM(const char* caminhoDaROM) {
     return true;
 }
 
-//loop principal
+//main
 int main(){
     std::cout << "refogado de macaco-prego amanha no refeitorio" << std::endl;
     carregarROM(caminhoDaROM.c_str());
