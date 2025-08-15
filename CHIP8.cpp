@@ -54,6 +54,44 @@ bool carregarROM(const char* caminhoDaROM) {
     return true;
 }
 
+
+//funcao para pegar os opcodes da ROM na memoria
+uint16_t pegarOpcode(){
+
+    uint8_t byteMaior = memoria[PC];
+    uint8_t byteMenor = memoria [PC + 1];
+
+    uint16_t opcode = (byteMaior << 8) | byteMenor;
+    PC = PC + 2;
+    return opcode;
+}
+
+
+//switch com os opcodes
+void opcodes (){
+
+uint16_t opcode = pegarOpcode();
+    
+    switch(opcode){
+        //CLS -- limpa o display
+        case 0x00E0:
+
+            break;
+        case 0x00EE:
+            PC = stack[SP];
+            SP = SP - 1;
+            break;
+        case 0x1nnn:
+            PC = nnn
+            break;
+        case 0x2nnn:
+
+            break;
+    }
+}
+
+
+
 //main
 int main(){
     std::cout << "refogado de macaco-prego amanha no refeitorio" << std::endl;
