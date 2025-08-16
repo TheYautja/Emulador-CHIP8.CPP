@@ -82,6 +82,7 @@ uint16_t opcode = pegarOpcode();
             SP = SP - 1;
             break;
         case 0x1nnn:
+        uint16_t nnn = opcode & 0x0FFF;
             PC = nnn
             break;
         case 0x2nnn:
