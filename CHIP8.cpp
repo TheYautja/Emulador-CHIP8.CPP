@@ -316,7 +316,6 @@ void executarOpcode() {
 
 
 
-//main
 int main(){
     std::cout << "refogado de macaco-prego amanha no refeitorio" << std::endl;
     carregarROM(caminhoDaROM.c_str());
